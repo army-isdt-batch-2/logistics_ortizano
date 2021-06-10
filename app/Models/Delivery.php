@@ -14,6 +14,7 @@ class Delivery extends Model
         'transportation_id',
         'date_distributed',
         'status'
+        
 
     ];
 }

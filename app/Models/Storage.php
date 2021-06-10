@@ -16,7 +16,7 @@ class Storage extends Model
         'floor',
         'room',
         'cabinet'
-
+        
     ];
 
 }

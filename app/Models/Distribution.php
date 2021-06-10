@@ -16,6 +16,7 @@ class Distribution extends Model
         'asset_id',
         'quantity',
         'status'
+       
 
     ];
 }

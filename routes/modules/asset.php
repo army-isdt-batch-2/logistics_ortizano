@@ -20,7 +20,7 @@ Route::get('/assets/edit/{id}', [ AssetsController::class, 'edit' ])->name('asse
 
 
 
-Route::post('/assets/update/{id}', [ AssetsController::class, 'update' ])->name('assets.update');
+Route::post('/asset/update/{id}', [ AssetsController::class, 'update' ])->name('asset.update'); 
 
 
 

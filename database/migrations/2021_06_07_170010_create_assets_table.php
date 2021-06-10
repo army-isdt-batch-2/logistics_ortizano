@@ -22,7 +22,7 @@ class CreateAssetsTable extends Migration
             $table->unsignedBiginteger('storage_id')->index();
             $table->integer('total_stocks');
 
-            $table->foreign('supplier_id')->references('id')->on('suppliers');
+            $table->foreign('supplier_id')->references('id')->on('supplier');
             $table->foreign('storage_id')->references('id')->on('storage');
             $table->timestamps();
         });

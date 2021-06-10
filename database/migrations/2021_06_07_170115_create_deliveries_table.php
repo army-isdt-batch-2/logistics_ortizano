@@ -20,8 +20,8 @@ class CreateDeliveriesTable extends Migration
             $table->date('date_distributed');
             $table->enum('status', ['delivered', 'returned']);
 
-            $table->foreign('distribution_id')->references('id')->on('distributions');
-            $table->foreign('transportation_id')->references('id')->on('transportations');
+            $table->foreign('distribution_id')->references('id')->on('distribution');
+            $table->foreign('transportation_id')->references('id')->on('transportation');
             $table->timestamps();
         });
     }

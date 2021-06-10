@@ -14,6 +14,7 @@ class Transportation extends Model
         'driver_name',
         'driver_contact',
         'notes'
+        
 
     ];
 }

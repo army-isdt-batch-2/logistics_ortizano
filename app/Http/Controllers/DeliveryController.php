@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Distribution;
+use App\Models\Delivery;
 
 
 use Redirect;
 
-class DistributionController extends Controller
+class DeliveryController extends Controller
 {
     
     protected $request;
@@ -22,8 +22,8 @@ class DistributionController extends Controller
    
     public function index()
     {
-        return view ('distribution.index')->with([
-            'data' => Distribution::all()
+        return view ('deliveries.index')->with([
+            'data' => Delivery::all()
         ]);
     }
 
@@ -31,17 +31,17 @@ class DistributionController extends Controller
     
     public function create()
     {
-        return view ('distribution.create');
+        return view ('deliveries.create');
     }
 
 
     
     public function store()
     {
-        Distribution::create($this->request->except('_token'));
+        Delivery::create($this->request->except('_token'));
 
-       
-        return Redirect::route('distribution')->with([
+        
+        return Redirect::route('deliveries')->with([
             'success' => "New Record is Successfully Created"
         ]);
     }
@@ -50,19 +50,19 @@ class DistributionController extends Controller
     
     public function edit($id){
 
-        return view ('distribution.edit')->with([
-            'data' => Distribution::where('id', '=', $id)->first()
+        return view ('deliveries.edit')->with([
+            'data' => Delivery::where('id', '=', $id)->first()
         ]);
     }
 
 
     
     public function update($id){
-       
-        Distribution::where('id', '=', $id)->update($this->request->except('_token'));
+        
+        Delivery::where('id', '=', $id)->update($this->request->except('_token'));
 
-       
-        return Redirect::route('distribution')->with([
+        
+        return Redirect::route('deliveries')->with([
             'success' => "Record is successfully updated"
         ]);
     }
@@ -70,11 +70,11 @@ class DistributionController extends Controller
 
      
     public function delete($id){
-       
-        Distribution::destroy($id);
+        
+        Delivery::destroy($id);
 
-       
-        return Redirect::route('distribution')->with([
+        
+        return Redirect::route('deliveries')->with([
             'success' => "Record is successfully deleted"
         ]);
     }

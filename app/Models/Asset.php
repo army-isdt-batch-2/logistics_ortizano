@@ -16,6 +16,7 @@ class Asset extends Model
         'supplier_id',
         'storage_id',
         'total_stocks'
+        
 
     ];
 }

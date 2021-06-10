@@ -15,6 +15,7 @@ class Returns extends Model
         'returned_by_contact',
         'quantity',
         'reason'
+        
 
     ];
 
